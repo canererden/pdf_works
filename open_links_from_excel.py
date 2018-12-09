@@ -1,6 +1,9 @@
-import xlrd, webbrowser
+"""
+put this script to the same file with websites.xlsx which contains the links
+author: Caner Erden
+"""
 
-#put this script to the same file with websites.xlsx which contains the links
+import xlrd, webbrowser
 
 workbook = xlrd.open_workbook('websites.xlsx')
 # Sheet name
