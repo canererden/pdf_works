@@ -1,17 +1,16 @@
 """
-This script gets all PDF files meta information in a file and give them within a CSV file.
+This script gets all PDF files meta information in a file and give them within a xlsx file.
 author: Caner Erden
 """
 # -*- coding: utf-8 -*-
 
-import os
+import glob 
 import csv
 import PyPDF2
 from openpyxl import Workbook
 
 # Get all pdfs in a folder
-files = [f for f in os.listdir('.') if os.path.isfile(
-    f) and f.endswith('.pdf')]  # Working Directory
+files = glob.glob('pdf_samples\\*.pdf')  # Working Directory
 
 # define excel workbook
 kitap = Workbook()
@@ -29,7 +28,7 @@ for file in files:
     sayfa.append([file, pdf.getNumPages()])
 
 # Save the workbook
-kitap.save("sayfa_numaralari.xlsx")
+kitap.save("extracted_page_numbers_from_PDF.xlsx")
 
 # Close the workbook
 kitap.close()
