@@ -1,6 +1,7 @@
 """
 author: Caner Erden
 """
+import os
 try:
     from xml.etree.cElementTree import XML
 except ImportError:
@@ -12,7 +13,7 @@ PARA = WORD_NAMESPACE + 'p'
 TEXT = WORD_NAMESPACE + 't'
 
 
-def get_docx_text(path='C:\\Users\\cerde\Desktop\\py_word'):
+def get_docx_text(path= os.getcwd()+'\\word_samples'):
     """
     Take the path of a docx file as argument, return the text in unicode.
     """
