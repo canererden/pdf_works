@@ -20,8 +20,8 @@ kitap = Workbook()
 sayfa = kitap.active
 
 # Enter First 2 cell name
-sayfa['A1'] = "Dosya İsmi"
-sayfa['B1'] = "Sayfa Numarası"
+sayfa['A1'] = "File Name"
+sayfa['B1'] = "Page Number"
 
 # Give the numbers
 for file in files:
