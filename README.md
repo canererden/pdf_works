@@ -1,2 +1,2 @@
-# pdf_works 
-PDF works for academic journal manager
+# pdf, word and excel works 
+Scripts for academic journal publishing system.
